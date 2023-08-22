@@ -11,4 +11,3 @@ spec:
       nodePort: 30700
   selector:
     app: demo-nodejs
-  type: NodePort
