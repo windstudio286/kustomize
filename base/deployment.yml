@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-nodejs
+  labels:
+    app: demo-nodejs
+spec:
+  selector:
+    matchLabels:
+      app: demo-nodejs
+  template:
+    metadata:
+      labels:
+        app: demo-nodejs
+    spec:
+      containers:
+        - name: demo-nodejs
+          image: 789356455304.dkr.ecr.ap-south-1.amazonaws.com/demo-ecr:1
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+      imagePullSecrets:
+        - name: aws-secret
