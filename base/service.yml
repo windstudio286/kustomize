@@ -7,8 +7,11 @@ metadata:
     app: demo-nodejs
 spec:
   ports:
-    - protocol: TCP
-      port: 8080
+    - name: demo-nodejs
       targetPort: 8080
+      port: 8080
+      nodePort: 30253
+      protocol: TCP
   selector:
     app: demo-nodejs
+  type: NodePort
