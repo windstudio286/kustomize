@@ -16,9 +16,9 @@ spec:
     spec:
       containers:
         - name: demo-nodejs
-          image: 789356455304.dkr.ecr.ap-south-1.amazonaws.com/demo-ecr:latest
+          image: ttcong194/argo-wf-demo:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
       imagePullSecrets:
-        - name: aws-secret
+        - name: docker-hub-secret-name
